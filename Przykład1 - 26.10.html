@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie przykładowe 1 - 26.10</title>
+</head>
+
+<body>
+    <h1>Zadanie przykładowe 1 - 26.10</h1>
+    
+    <form action="">
+        <input type="text" name="pole" />
+        <button type="submit">Pokaż</button>
+    </form>
+
+    <div class="wynik"></div>
+    
+
+<script>
+    //odwołujemy sie do formularza
+    const formularz = document.querySelector('form');
+
+    //pobieramy diva o klasie wynik
+    const wynik = document.querySelector('.wynik');
+
+    //do zdarzenia submit formularza przypismujemy funkcje 
+    formularz.addEventListener('submit',(e)=>{
+        
+        //zatrzymujemy domyślne działanie przeglądarki na formularzu
+        e.preventDefault();
+
+        //odwołujemy sie do wartości pola w formularzu
+        const poleWFromularzu = document.querySelector('input[name="pole"]').
+        value; //pobieramy wartość tego pola - .value
+
+        //wyświetlamy w divie wartość pola
+        wynik.textContent= poleWFromularzu;
+    })
+
+</script>
+
+</body>
+
+</html>
