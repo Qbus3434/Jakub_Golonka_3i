@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 7 - Moodle - 26.10</title>
+</head>
+<body>
+    <h1>Zadanie 7 - Moodle - 26.10</h1>
+
+    <h4>Liczby pierwsza dzielona przez drugą.</h4>
+
+    <div class="wynik"></div>
+    <script>
+        const znak = prompt('Podaj znak działania(+ , - , * , /)');
+        var wyniki = 0;
+        
+        const wynik = document.querySelector('.wynik');
+
+        if(znak == '+')
+        {
+            var a = prompt('Podaj 1 liczbe');
+            var b = prompt('Podaj 2 liczbe');
+            a = parseInt(a);
+            b = parseInt(b);
+            wyniki = (a + b);
+            wynik.textContent = 'Suma ' + a + " i " + b + ' wynosi: ' + wyniki;
+        }
+        else if(znak == '-')
+        {
+            var a = prompt('Podaj 1 liczbe');
+            var b = prompt('Podaj 2 liczbe');
+            a = parseInt(a);
+            b = parseInt(b);
+            wyniki = (a - b);
+            wynik.textContent = 'Różnica ' + a + " i " + b + ' wynosi: ' + wyniki;
+        }
+        else if(znak == '*')
+        {
+            var a = prompt('Podaj 1 liczbe');
+            var b = prompt('Podaj 2 liczbe');
+            a = parseInt(a);
+            b = parseInt(b);
+            wyniki = (a * b);
+            wynik.textContent = 'Iloczyn ' + a + " i " + b + ' wynosi: ' + wyniki;
+        }
+        else if(znak == '/')
+        {
+            var a = prompt('Podaj 1 liczbe');
+            var b = prompt('Podaj 2 liczbe');
+            a = parseInt(a);
+            b = parseInt(b);
+            wyniki = (a / b);
+            wynik.textContent = 'Iloraz ' + a + " i " + b + ' wynosi: ' + wyniki;
+        }
+        else
+        {
+            wynik.textContent = 'ERROR 444 - Błędny znak działania :(';
+        }
+    </script>
+    
+</body>
+</html>

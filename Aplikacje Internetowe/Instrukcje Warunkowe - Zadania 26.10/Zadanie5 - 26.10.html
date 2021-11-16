@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 5 - Moodle - 26.10</title>
+</head>
+<body>
+    <h1>Zadanie 5 - Moodle - 26.10</h1>
+
+    <h4>Liczby w kolejności rosnącej.</h4>
+
+    <div class="wynik"></div>
+        <script>
+            const a = prompt('Podaj 1 liczbe');
+            const b = prompt('Podaj 2 liczbe');
+            const c = prompt('Podaj 3 liczbe');
+            
+            const wynik = document.querySelector('.wynik');     
+                
+                if(a > b)
+                {
+                    if(a > c)
+                    {
+                        if(b > c)
+                        {
+                            wynik.textContent = c + ' ' + b + ' ' + a;
+                        }
+                        else
+                        {
+                            wynik.textContent = b + ' ' + c + ' ' + a;
+                        }
+                    }
+                    else
+                    {
+                        wynik.textContent = b + ' ' + a + ' ' + c;
+                    }
+                }
+                else if (b > c)
+                {
+                    if(a > c)
+                    {
+                        wynik.textContent = c + ' ' + a + ' ' + b;
+                    }
+                    else
+                    {
+                        wynik.textContent = a + ' ' + c + ' ' + b;
+                    }
+                }
+                else
+                {
+                    if(b > a)
+                    {
+                        wynik.textContent = a + ' ' + b + ' ' + c;
+                    }
+                    else
+                    {
+                        wynik.textContent = b + ' ' + a + ' ' + c;
+                    }
+                }
+        </script>
+</body>
+</html>
