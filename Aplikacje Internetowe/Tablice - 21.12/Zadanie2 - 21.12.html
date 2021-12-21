@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 2</title>
+</head>
+
+<body>
+    <h1>Zadanie 2 - Tablice</h1>
+
+    <div class="tablica1"></div>
+    <div class="tablica2"></div>
+
+    <script>
+        const divTablica1 = document.querySelector('.tablica1');
+        const divTablica2 = document.querySelector('.tablica2');
+        const liczby1 = [];
+        const liczby2 = [];
+        for (let i = 2; i <= 100; i += 2) {
+            liczby1.push(i);
+        }
+        for (let i = 1; i <= 100; i += 2) {
+            liczby2.push(i);
+        }
+        tab = liczby1.concat(liczby2);
+        divTablica1.textContent = tab.join(', ');    
+    </script>
+</body>
+
+</html>
