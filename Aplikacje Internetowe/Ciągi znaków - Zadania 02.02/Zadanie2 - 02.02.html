@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 2 - Ciągi Znaków</title>
+</head>
+
+<body>
+    <h1>Zadanie 2 - Ciągi Znaków</h1>
+
+    <input type="text" name="slowo">
+    <button>Sprawdź</button>
+    <div class="wynik"></div>       
+    <script>
+        const sprawdzenie = function(wprowadzoneSlowo){
+            let x = 0;
+            const zamiana = wprowadzoneSlowo.toLowerCase();
+            for(let i = wprowadzoneSlowo.length + 1; i--; i<=0)
+            { 
+                const samogloska = zamiana.charAt(wprowadzoneSlowo.length - i);
+                if(samogloska == 'a' || samogloska == 'e' || samogloska == 'i' || samogloska == 'o' || samogloska == 'u' ||samogloska == 'y' || samogloska == 'ó' || samogloska == 'ą' || samogloska == 'ę')
+                {
+                   x++;
+                }
+                
+            }
+            return `Słowo "${wprowadzoneSlowo}" ma ${x} samogłosek`;
+        };
+
+        const btn = document.querySelector('button');
+        const div = document.querySelector('div');
+        btn.addEventListener('click', ()=>{
+            const slowo = document.querySelector('input[name="slowo"]').value;
+            div.textContent = sprawdzenie(slowo);
+        })
+    </script>
+</body>
+</html>
