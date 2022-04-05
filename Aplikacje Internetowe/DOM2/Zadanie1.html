@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: black;
+            padding: 50px;
+            color: yellow;
+        }
+    </style>s
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nobis, natus temporibus eos molestiae dolor porro mollitia perferendis exercitationem accusantium officia sint ut, pariatur deleniti repudiandae, quam vero rerum aut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti cupiditate nesciunt beatae voluptate perferendis ea nobis minus magnam, iusto ipsam aspernatur, sunt eaque nostrum voluptatum placeat! Quas odit tenetur fugit! lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid labore numquam quibusdam asperiores vero ipsa dicta illum tenetur saepe? Omnis placeat atque unde ipsam, quis veritatis perspiciatis culpa odit!
+    </div>
+
+    <script>
+        function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        //pobieramy diva
+        const div = document.querySelector('div').textContent;
+        const obiektDiv = document.querySelector('div');
+        const colors = ['red','green','blue','orange','pink','white'];
+
+        //przypisujemy obsluge zdarzenia działania myszy
+        obiektDiv.addEventListener('click', function(){
+            //zmiana koloru vczcionki
+            let los = getRandomInt(0,5);
+            obiektDiv.style.color = colors[los];
+        })
+
+        //przypisujemy obsluge zdarzenia najechania myszy
+        obiektDiv.addEventListener('mouseover', function(){
+            obiektDiv.textContent= "Nowa treść diva";
+        })
+
+        //przypisujemy obsluge zdarzenia odjechania myszy
+        obiektDiv.addEventListener('mouseout', function(){
+            obiektDiv.textContent= div;
+        })
+
+    </script>
+</body>
+</html>
