@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 3 - Jakub Golonka 3i</title>
+</head>
+<body>
+    <h1>Jakub Golonka 3i - Zadanie 3</h1>
+
+    <form action="">
+        <input type="number" name="liczba">
+        <input type="submit" value="Dzielniki">
+    </form>
+    
+    <div class="wynik"></div>
+
+    <script>
+        //Jakub Golonka 3i - Zadanie 3
+        const formularz = document.querySelector('form');
+        const div = document.querySelector('.wynik');
+
+        var liczby = [];
+        
+        formularz.addEventListener('submit',function(e){
+            
+            e.preventDefault();
+            let liczba = document.querySelector('input[name="liczba"]').value*1;
+            for(let i = 0; i < 100; i++)
+            {
+                if(liczba%i==0)
+                {
+                    liczby.push(i);
+                }
+            }
+            
+            div.textContent = `Dzielniki liczby ${liczba} to :${liczby.join(', ')}`;
+        });
+        //Jakub Golonka 3i - Zadanie 3
+    </script>
+</body>
+</html>
